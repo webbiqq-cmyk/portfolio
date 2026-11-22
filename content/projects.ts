@@ -49,16 +49,16 @@ export const projects: Project[] = [
     category: "electronics",
     featured: true,
     summary:
-      "Ladder-logic control programs for industrial and warehouse automation sequences, simulated and validated across operating conditions.",
+      "Ladder-logic control of sensors, actuators, lighting, HVAC, fire detection and rack occupancy for industrial and warehouse automation.",
     tech: ["PLC", "Ladder logic", "I/O simulation", "Process control"],
     specs: [
       { label: "Language", value: "Ladder logic" },
-      { label: "Scope", value: "Industrial & warehouse sequences" },
+      { label: "Scope", value: "Sensors, actuators, lighting, HVAC, fire detection, rack occupancy" },
     ],
     problem:
       "Automate industrial and warehouse operating sequences with a PLC so that every input condition produces a predictable, safe output.",
     whatIDid: [
-      "Wrote ladder-logic programs for industrial and warehouse automation sequences.",
+      "Wrote ladder-logic programs controlling sensors, actuators, lighting, HVAC, fire detection and rack occupancy.",
       "Simulated and tested I/O behaviour across operating conditions.",
       "Validated the control sequences in simulation.",
     ],
@@ -67,7 +67,6 @@ export const projects: Project[] = [
     todo: [
       "PLC brand / software used (e.g. Siemens TIA Portal, Allen-Bradley, Delta)",
       "Screenshots of the ladder logic and any HMI",
-      "Description of the specific sequences (conveyor, sorting, interlocks…)",
       "Results / outcome",
       "Year and course context",
     ],
@@ -78,8 +77,8 @@ export const projects: Project[] = [
     category: "software",
     featured: true,
     summary:
-      "Multi-portal management system for a dental laboratory with quality control and audit trails, built on React and PostgreSQL.",
-    tech: ["React", "PostgreSQL", "Role-based portals", "Audit trails"],
+      "Multi-portal React/PostgreSQL platform for a dental laboratory with case tracking, role-based access, QC checkpoints and audit trails.",
+    tech: ["React", "PostgreSQL", "Role-based access", "Audit trails"],
     specs: [
       { label: "Frontend", value: "React" },
       { label: "Database", value: "PostgreSQL" },
@@ -89,7 +88,8 @@ export const projects: Project[] = [
       "Run a dental laboratory's work through one system: separate portals for the people involved, quality control on the work produced, and a traceable history of every change.",
     whatIDid: [
       "Built a multi-portal web application in React backed by PostgreSQL.",
-      "Implemented quality-control steps in the workflow.",
+      "Implemented case tracking through the lab workflow, with role-based access per portal.",
+      "Added quality-control checkpoints to the workflow.",
       "Added audit trails to record changes.",
     ],
     images: [],
@@ -119,7 +119,7 @@ export const projects: Project[] = [
     whatIDid: [
       "Modelled a closed-loop DC motor speed control system in MATLAB/Simulink.",
       "Tuned the PID controller with the Ziegler–Nichols, Cohen–Coon and Tyreus–Luyben methods.",
-      "Compared the responses and analysed stability.",
+      "Compared the step responses and analysed stability.",
     ],
     images: [],
     links: [],
@@ -138,11 +138,11 @@ export const projects: Project[] = [
     category: "electronics",
     featured: false,
     summary:
-      "Arduino-based smart home system integrating sensors and actuators, and an autonomous obstacle-avoidance robot.",
-    tech: ["Arduino", "C++", "Sensors", "Actuators"],
+      "Arduino smart home system and obstacle-avoidance robot using PIR, LDR, DHT11, flame and ultrasonic sensors, with servo and DC motor drivers.",
+    tech: ["Arduino", "PIR / LDR / DHT11", "Ultrasonic", "Servo & DC motor drivers"],
     images: [],
     links: [],
-    todo: ["Photos", "Which sensors / actuators", "Year"],
+    todo: ["Photos", "Year"],
   },
   {
     slug: "traffic-light-controller",
@@ -174,11 +174,11 @@ export const projects: Project[] = [
     category: "electronics",
     featured: false,
     summary:
-      "Feasibility study on recovering energy from effluent treatment plant (ETP) sludge, carried out at WestPoint Home Bahrain.",
+      "Feasibility study at WestPoint Home Bahrain evaluating drying, thermal conversion, and boiler/steam and turbine energy recovery for textile wastewater sludge.",
     tech: ["Feasibility study", "Energy recovery", "Industrial process"],
     images: [],
     links: [],
-    todo: ["Method assessed and conclusion", "Whether any figures can be published"],
+    todo: ["Conclusion / recommendation", "Whether any figures can be published"],
   },
 
   // ── Software ──────────────────────────────────────────────────────────────
@@ -188,8 +188,8 @@ export const projects: Project[] = [
     category: "software",
     featured: false,
     summary:
-      "Sports booking platform for web and mobile, with scheduling and a venue admin portal.",
-    tech: ["Web", "Mobile", "Scheduling", "Admin portal"],
+      "Web and mobile sports booking platform with court scheduling, availability sync, venue admin and authentication.",
+    tech: ["Web", "Mobile", "Scheduling", "Authentication"],
     images: [],
     links: [],
     todo: ["Stack", "Screenshots", "Live link / app store links", "Your role"],
@@ -200,8 +200,8 @@ export const projects: Project[] = [
     category: "software",
     featured: false,
     summary:
-      "Operations platform with JWT authentication, containerised with Docker and wired to n8n automation workflows.",
-    tech: ["Node.js", "MongoDB", "JWT", "Docker", "n8n"],
+      "Automation platform with JWT auth, REST job APIs, Docker and n8n workflows.",
+    tech: ["Node.js", "MongoDB", "React", "JWT", "Docker", "n8n"],
     images: [],
     links: [],
     todo: ["What it operates / automates", "Screenshots", "Repo link"],
@@ -225,7 +225,7 @@ export const projects: Project[] = [
     featured: false,
     summary:
       "MERN event management platform with Google Maps integration for event locations and discovery.",
-    tech: ["MongoDB", "Express", "React", "Node.js", "Google Maps API"],
+    tech: ["MongoDB", "Express", "React", "Node.js", "Vite", "Google Maps API"],
     images: [],
     links: [],
     todo: ["Repo link", "Live link", "Screenshot"],

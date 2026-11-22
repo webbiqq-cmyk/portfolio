@@ -1,3 +1,5 @@
+import portrait from "@/assets/hasan.jpg";
+
 export const site = {
   name: "Muhammad Hassan",
   shortName: "M. Hassan",
@@ -12,12 +14,12 @@ export const site = {
     "Before that I worked as a software developer at Leading Trading Est, building the company's e-commerce site and an internal CRM. I work on both ends of an industrial system: sensors, drives and control loops on one side; dashboards, databases and web applications on the other.",
   ],
   email: "hasnshahidd@gmail.com",
-  linkedin: "https://www.linkedin.com/in/hasan-shahid-3b5b5a349/",
-  github: "https://github.com/HasannShd",
+  linkedin: "https://www.linkedin.com/in/muhammad-hassan-3b5b5a349/",
+  /** GitHub account(s), shown in contact + footer. */
+  githubs: [{ label: "GitHub", handle: "HasannShd", href: "https://github.com/HasannShd" }],
+  /** Source is a 1000×1250 JPEG; next/image serves AVIF/WebP at responsive sizes. */
   photo: {
-    src: "/images/hasan.webp",
-    width: 600,
-    height: 750,
+    image: portrait,
     alt: "Portrait of Muhammad Hassan",
   },
   languages: [

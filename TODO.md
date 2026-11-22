@@ -3,10 +3,13 @@
 Nothing here is shown on the site; missing images/links are simply omitted until you add them.
 
 ## Global
-- [ ] **CV PDF** → `public/cv.pdf` (until then the hero button is "Request CV", a mailto link)
+- [x] CV PDF added at `public/cv.pdf`. **Note:** it contains your phone number, which the site itself no longer shows.
+- [ ] **Tamkeen wording mismatch** — the site says "Winner, Tamkeen Tech Start-up Pitch Competition"; your CV lists it
+      under Volunteering as "Tamkeen Tech Start-up Event". Make them agree.
 - [ ] **Tamkeen pitch competition year** → `content/education.ts`
-- [ ] **Confirm LinkedIn URL** — old site used `/in/muhammad-hassan-3b5b5a349/`, new site uses `/in/hasan-shahid-3b5b5a349/` as you specified
-- [ ] **Confirm hosting** — where hasanportfolio.com deploys from; build settings must be `npm run build` → `dist`
+- [ ] **Check the first Vercel deploy of the Next.js build** — `vercel.json` pins framework = nextjs; if the project has an
+      Output Directory override of `dist` set in the dashboard, clear it (Settings → Build & Deployment)
+
 
 ## Featured projects (have detail pages)
 ### Smart Health Monitoring System
@@ -18,7 +21,6 @@ Nothing here is shown on the site; missing images/links are simply omitted until
 ### PLC Industrial & Warehouse Automation
 - [ ] PLC brand / software (TIA Portal, Studio 5000, …)
 - [ ] Ladder logic / HMI screenshots
-- [ ] Which sequences specifically (conveyor, sorting, interlocks…)
 - [ ] Results, year and course context
 
 ### Dental Laboratory Management System
@@ -34,10 +36,10 @@ Nothing here is shown on the site; missing images/links are simply omitted until
 - [ ] Which method you chose and why; year and course
 
 ## Other projects (index only)
-- [ ] Smart Home & Robot — photos, sensors/actuators used, year
+- [ ] Smart Home & Robot — photos, year
 - [ ] Traffic Light Controller — schematic/PCB images, year
 - [ ] Cascading Notch Filters — notch frequencies, response plot, year
-- [ ] Sludge-to-Energy — method and conclusion, what can be published
+- [ ] Sludge-to-Energy — conclusion, what can be published
 - [ ] Harakat — stack, screenshots, live/app-store links, your role
 - [ ] AI Operations Center — what it automates, screenshots, repo
 - [ ] Fives Nexus — what data it shows, screenshots, link
