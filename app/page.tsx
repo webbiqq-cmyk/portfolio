@@ -99,21 +99,8 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* ── Projects ─────────────────────────────────────── */}
-      <Section id="projects" index="02" title="Selected projects">
-        <ul className="grid gap-4 md:grid-cols-2 md:gap-5">
-          {featuredProjects.map((p, i) => (
-            <li key={p.slug} className="flex">
-              <FeaturedCard project={p} index={i} />
-            </li>
-          ))}
-        </ul>
-        <h3 className="mb-6 mt-20 text-lg font-semibold tracking-tight">Project index</h3>
-        <ProjectIndex projects={projects} labels={categoryLabels} />
-      </Section>
-
       {/* ── Experience ───────────────────────────────────── */}
-      <Section id="experience" index="03" title="Experience">
+      <Section id="experience" index="02" title="Experience">
         <ol className="relative space-y-12 border-l border-line pl-6 sm:pl-10">
           {mainRoles.map((r) => (
             <li key={`${r.title}-${r.org}`} className="relative">
@@ -162,6 +149,19 @@ export default function HomePage() {
             </div>
           </li>
         </ol>
+      </Section>
+
+      {/* ── Projects ─────────────────────────────────────── */}
+      <Section id="projects" index="03" title="Selected projects">
+        <ul className="grid gap-4 md:grid-cols-2 md:gap-5">
+          {featuredProjects.map((p, i) => (
+            <li key={p.slug} className="flex">
+              <FeaturedCard project={p} index={i} />
+            </li>
+          ))}
+        </ul>
+        <h3 className="mb-6 mt-20 text-lg font-semibold tracking-tight">Project index</h3>
+        <ProjectIndex projects={projects} labels={categoryLabels} />
       </Section>
 
       {/* ── Education ────────────────────────────────────── */}

@@ -2,8 +2,8 @@ import Link from "next/link";
 import { ThemeToggle } from "./theme-toggle";
 
 const nav = [
-  { href: "/#projects", label: "Projects" },
   { href: "/#experience", label: "Experience" },
+  { href: "/#projects", label: "Projects" },
   { href: "/#skills", label: "Skills", hideOnMobile: true },
   { href: "/#contact", label: "Contact" },
 ];
