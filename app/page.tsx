@@ -10,8 +10,6 @@ import { education, awards } from "@/content/education";
 import { skills } from "@/content/skills";
 import { hasCv } from "@/lib/cv";
 
-const cvHref = hasCv ? "/cv.pdf" : `mailto:${site.email}?subject=CV%20request`;
-
 export default function HomePage() {
   const mainRoles = experience.filter((r) => !r.minor);
   const minorRoles = experience.filter((r) => r.minor);
@@ -38,13 +36,15 @@ export default function HomePage() {
               >
                 View projects <ArrowRight />
               </a>
-              <a
-                href={cvHref}
-                {...(hasCv ? { download: "Muhammad-Hassan-CV.pdf" } : {})}
-                className="inline-flex h-11 items-center gap-2 rounded-md border border-line-strong px-5 text-sm font-medium transition-colors hover:border-fg"
-              >
-                {hasCv ? <Download /> : <Mail />} {hasCv ? "Download CV" : "Request CV"}
-              </a>
+              {hasCv && (
+                <a
+                  href="/cv.pdf"
+                  download="Muhammad-Hassan-CV.pdf"
+                  className="inline-flex h-11 items-center gap-2 rounded-md border border-line-strong px-5 text-sm font-medium transition-colors hover:border-fg"
+                >
+                  <Download /> Download CV
+                </a>
+              )}
             </div>
             <dl className="mt-12 grid max-w-xl gap-x-8 gap-y-4 border-t border-line pt-6 text-sm sm:grid-cols-2">
               <div>
@@ -62,12 +62,11 @@ export default function HomePage() {
               <span aria-hidden className="absolute -left-px -top-px size-3 border-l-2 border-t-2 border-accent" />
               <span aria-hidden className="absolute -bottom-px -right-px size-3 border-b-2 border-r-2 border-accent" />
               <Image
-                src={site.photo.src}
+                src={site.photo.image}
                 alt={site.photo.alt}
-                width={site.photo.width}
-                height={site.photo.height}
                 preload
-                sizes="(min-width: 1024px) 360px, 320px"
+                placeholder="blur"
+                sizes="(min-width: 1024px) 344px, (min-width: 640px) 304px, 264px"
                 className="h-auto w-full"
               />
             </div>
@@ -125,6 +124,16 @@ export default function HomePage() {
                     {r.org}
                     {r.location ? `, ${r.location}` : ""}
                   </p>
+                  {r.link && (
+                    <a
+                      href={r.link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1 inline-flex items-center gap-1 font-mono text-xs text-accent hover:underline"
+                    >
+                      {r.link.label} <ArrowUpRight />
+                    </a>
+                  )}
                   <ul className="mt-4 space-y-2 text-[15px] leading-relaxed">
                     {r.points.map((pt) => (
                       <li key={pt} className="flex gap-3">
@@ -225,8 +234,8 @@ export default function HomePage() {
           <ul className="divide-y divide-line border-y border-line text-sm">
             {[
               { href: `mailto:${site.email}`, label: "Email", Icon: Mail, value: site.email, external: false },
-              { href: site.linkedin, label: "LinkedIn", Icon: LinkedIn, value: "hasan-shahid", external: true },
-              { href: site.github, label: "GitHub", Icon: GitHub, value: "HasannShd", external: true },
+              { href: site.linkedin, label: "LinkedIn", Icon: LinkedIn, value: "muhammad-hassan", external: true },
+              ...site.githubs.map((g) => ({ href: g.href, label: g.label, Icon: GitHub, value: g.handle, external: true })),
             ].map(({ href, label, Icon, value, external }) => (
               <li key={label}>
                 <a
