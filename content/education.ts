@@ -2,7 +2,7 @@ import type { EducationItem } from "./types";
 
 export const education: EducationItem[] = [
   {
-    qualification: "Electronics Engineering",
+    qualification: "Bachelor's in Electronics Engineering",
     institution: "Bahrain Polytechnic",
     period: "Sep 2023 – Oct 2027 (expected)",
     note: "Final year",
@@ -21,8 +21,8 @@ export const education: EducationItem[] = [
 
 export const awards = [
   {
-    title: "1st place — Tamkeen Tech Startup pitch competition",
-    detail: "Wyndham Grand Hotel, Bahrain. Developed and pitched a tech startup concept as part of a team.",
+    title: "Winner, Tamkeen Tech Start-up Pitch Competition",
+    detail: "Wyndham Grand Hotel, Bahrain. Developed and pitched a tech start-up concept as part of a team.",
     // TODO(year): add the year of the competition.
   },
 ];

@@ -41,6 +41,8 @@ export interface Role {
   period: string;
   /** Minor roles render compactly at the bottom of the timeline. */
   minor?: boolean;
+  /** Optional public link, e.g. the company website you built. */
+  link?: { label: string; href: string };
   points: string[];
 }
 

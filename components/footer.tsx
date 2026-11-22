@@ -11,7 +11,9 @@ export function Footer() {
         <ul className="flex gap-5">
           <li><a className="hover:text-fg" href={`mailto:${site.email}`}>Email</a></li>
           <li><a className="hover:text-fg" href={site.linkedin} rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
-          <li><a className="hover:text-fg" href={site.github} rel="noopener noreferrer" target="_blank">GitHub</a></li>
+          {site.githubs.map((g) => (
+            <li key={g.href}><a className="hover:text-fg" href={g.href} rel="noopener noreferrer" target="_blank">{g.label}</a></li>
+          ))}
         </ul>
       </div>
     </footer>

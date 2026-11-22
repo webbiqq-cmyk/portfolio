@@ -1,15 +1,10 @@
 import type { NextConfig } from "next";
 
-// Static export: every route is pre-rendered to real HTML in ./dist,
-// so the site can be served by any static host (Vercel, Netlify, Cloudflare Pages, GitHub Pages).
+// Standard Next.js on Vercel: every route is statically generated (SSG) at build time,
+// and next/image serves AVIF/WebP at responsive sizes via Vercel's image optimizer.
 const nextConfig: NextConfig = {
-  output: "export",
-  distDir: "dist",
-  trailingSlash: false,
   images: {
-    // No image optimizer exists on a static host; images are pre-sized to WebP
-    // with `npm run images` (scripts/optimize-images.mjs) and served as-is.
-    unoptimized: true,
+    formats: ["image/avif", "image/webp"],
   },
   poweredByHeader: false,
   reactStrictMode: true,

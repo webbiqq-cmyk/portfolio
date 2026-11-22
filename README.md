@@ -1,7 +1,7 @@
 # hasanportfolio.com
 
-Personal site of Muhammad Hassan. Next.js (App Router) + TypeScript + Tailwind CSS, statically exported —
-every route is pre-rendered HTML in `dist/`.
+Personal site of Muhammad Hassan. Next.js (App Router) + TypeScript + Tailwind CSS on Vercel.
+Every route is statically generated (SSG) at build time, so each page ships real HTML.
 
 ## Editing content
 
@@ -17,28 +17,26 @@ All copy lives in typed files under `content/` — no component changes needed:
 
 ### Adding project images
 
-```bash
-npm run images -- path/to/screenshot.png public/images/projects/<slug>-1.webp 1600
-```
-
-Then add `{ src, alt, width, height }` to that project's `images` array (use the size the script prints).
+Put a high-resolution PNG/JPEG in `public/images/projects/` (e.g. `dental-lab-1.png`, ~2000px wide is plenty) and add
+`{ src: "/images/projects/dental-lab-1.png", alt, width, height }` to that project's `images` array, using the file's
+real pixel dimensions. `next/image` serves AVIF/WebP at the right size automatically — no manual conversion needed.
+Projects with no images simply show no image section.
 
 ### CV
 
-Drop the PDF at `public/cv.pdf` and rebuild. The hero button switches from "Request CV" (mailto) to
-"Download CV" automatically.
+Drop the PDF at `public/cv.pdf` and push. The "Download CV" button only appears when that file exists.
 
 ## Commands
 
 ```bash
 npm run dev        # local dev server
-npm run build      # static export to dist/
-npm run start      # serve dist/ locally
+npm run build      # production build (all routes pre-rendered)
+npm run start      # serve the production build locally
 npm run lint
 npm run typecheck
 ```
 
 ## Deploying
 
-Build command `npm run build`, output directory `dist`. Works on Vercel, Netlify, Cloudflare Pages or any
-static host. Hosts must map `/projects/x` to `projects/x.html` (all of the above do by default).
+Vercel, git-connected to `main`. `vercel.json` pins the framework preset to Next.js (the project was previously a
+Vite app, so this overrides any old "Vite / dist" setting). Domain and DNS are managed outside this repo.
