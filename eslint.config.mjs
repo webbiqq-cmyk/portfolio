@@ -4,6 +4,6 @@ import nextTs from "eslint-config-next/typescript";
 const config = [
   ...nextVitals,
   ...nextTs,
-  { ignores: ["dist/**", ".next/**", "next-env.d.ts"] },
+  { ignores: [".next/**", "next-env.d.ts"] },
 ];
 export default config;
