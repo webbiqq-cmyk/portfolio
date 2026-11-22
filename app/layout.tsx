@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter_Tight, JetBrains_Mono } from "next/font/google";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { themeScript } from "@/components/theme-toggle";
@@ -7,8 +7,8 @@ import { site } from "@/content/site";
 import { personJsonLd } from "@/lib/jsonld";
 import "./globals.css";
 
-const sans = Geist({ subsets: ["latin"], variable: "--font-geist-sans", display: "swap" });
-const mono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono", display: "swap" });
+const sans = Inter_Tight({ subsets: ["latin"], variable: "--font-sans-family", display: "swap" });
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono-family", display: "swap", preload: false });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
