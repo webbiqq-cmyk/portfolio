@@ -5,6 +5,7 @@ export const site = {
   shortName: "M. Hassan",
   url: "https://hasanportfolio.com",
   location: "Bahrain",
+  nationality: "Bahraini",
   role: "Electronics Engineer",
   tagline: "Electronics engineer building industrial control and full-stack systems",
   description:

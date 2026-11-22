@@ -3,9 +3,7 @@
 Nothing here is shown on the site; missing images/links are simply omitted until you add them.
 
 ## Global
-- [x] CV PDF added at `public/cv.pdf`. **Note:** it contains your phone number, which the site itself no longer shows.
-- [ ] **Tamkeen wording mismatch** — the site says "Winner, Tamkeen Tech Start-up Pitch Competition"; your CV lists it
-      under Volunteering as "Tamkeen Tech Start-up Event". Make them agree.
+- [x] CV PDF added at `public/cv.pdf` (updated: Tamkeen now listed as a win). Note: it still contains your phone number.
 - [ ] **Tamkeen pitch competition year** → `content/education.ts`
 - [ ] **Check the first Vercel deploy of the Next.js build** — `vercel.json` pins framework = nextjs; if the project has an
       Output Directory override of `dist` set in the dashboard, clear it (Settings → Build & Deployment)

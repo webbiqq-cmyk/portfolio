@@ -21,7 +21,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl gap-12 px-4 pb-16 pt-14 sm:px-6 sm:pb-24 sm:pt-20 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:items-center lg:gap-16">
           <div>
             <p className="label fade-up mb-6">
-              <span className="text-accent">●</span> {site.role} · {site.location}
+              <span className="text-accent">●</span> {site.role} · {site.nationality}
             </p>
             <h1 id="hero-title" className="fade-up fade-up-2 text-[2.6rem] font-semibold leading-[1.05] tracking-tight sm:text-6xl">
               {site.name}
@@ -89,6 +89,8 @@ export default function HomePage() {
           <dl className="grid h-fit grid-cols-[auto_1fr] gap-x-6 gap-y-3 rounded-lg border border-line p-6 text-sm">
             <dt className="label pt-0.5">Focus</dt>
             <dd>Industrial automation · Embedded systems · Web systems</dd>
+            <dt className="label pt-0.5">Nationality</dt>
+            <dd>{site.nationality}</dd>
             <dt className="label pt-0.5">Based</dt>
             <dd>{site.location}</dd>
             <dt className="label pt-0.5">Studying</dt>

@@ -11,6 +11,7 @@ export function personJsonLd() {
     jobTitle: site.role,
     description: site.description,
     email: `mailto:${site.email}`,
+    nationality: { "@type": "Country", name: "Bahrain" },
     address: { "@type": "PostalAddress", addressCountry: "BH" },
     sameAs: [site.linkedin, ...site.githubs.map((g) => g.href)],
     knowsLanguage: site.languages.map((l) => l.name),
