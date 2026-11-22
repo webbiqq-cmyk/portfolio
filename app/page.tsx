@@ -92,8 +92,8 @@ export default function HomePage() {
             <dd>Industrial automation · Embedded systems · Web systems</dd>
             <dt className="label pt-0.5">Based</dt>
             <dd>{site.location}</dd>
-            <dt className="label pt-0.5">Languages</dt>
-            <dd>{site.languages.map((l) => `${l.name} (${l.level.toLowerCase()})`).join(", ")}</dd>
+            <dt className="label pt-0.5">Studying</dt>
+            <dd>Electronics Engineering, Bahrain Polytechnic</dd>
           </dl>
         </div>
       </Section>
@@ -192,6 +192,18 @@ export default function HomePage() {
               </dd>
             </div>
           ))}
+          <div className="bg-bg p-6">
+            <dt className="label mb-3">Languages</dt>
+            <dd>
+              <ul className="space-y-1.5 text-[15px]">
+                {site.languages.map((l) => (
+                  <li key={l.name}>
+                    {l.name} <span className="text-muted">— {l.level}</span>
+                  </li>
+                ))}
+              </ul>
+            </dd>
+          </div>
         </dl>
       </Section>
 

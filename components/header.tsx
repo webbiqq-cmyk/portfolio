@@ -18,7 +18,7 @@ export function Header() {
         Skip to content
       </a>
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link href="/" className="font-mono text-sm font-medium tracking-tight" aria-label="Muhammad Hassan — home">
+        <Link href="/" className="font-mono text-sm font-medium tracking-tight">
           M.HASSAN<span className="text-accent">_</span>
         </Link>
         <div className="flex items-center gap-1 sm:gap-3">
