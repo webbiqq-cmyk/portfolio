@@ -70,10 +70,6 @@ export default function HomePage() {
                 className="h-auto w-full"
               />
             </div>
-            <figcaption className="label mt-3 flex justify-between">
-              <span>Fig. 1</span>
-              <span>Bahrain</span>
-            </figcaption>
           </figure>
         </div>
       </section>
